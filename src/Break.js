@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 export default class BreakSession extends Component {
+  hanlde2Click = () => this.props.handleClick("break-decrement")
 
   render() {
     const {
@@ -26,7 +27,7 @@ export default class BreakSession extends Component {
           <button
             class="button"
             id="break-decrement"
-            onClick={() => handleClick("break-decrement")}
+            onClick={this.hanlde2Click}
             disabled={disabled}
             >
             <i class="fa fa-arrow-down"></i>

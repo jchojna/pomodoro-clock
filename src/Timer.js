@@ -11,6 +11,7 @@ export default class Timer extends Component {
       handleStartStopClick,
       countingPhase,
       handleResetClick,
+      setBeepRef,
     } = this.props; 
 
     return (
@@ -32,18 +33,18 @@ export default class Timer extends Component {
           <button
             className="button"
             id="start_stop"
-            onClick={() => handleStartStopClick()}
+            onClick={handleStartStopClick}
           > {countingPhase}
           </button>
 
           <button
             className="button"
             id="reset"
-            onClick={() => handleResetClick()}
+            onClick={handleResetClick}
           > RESET
           </button>
           
-          <audio id="beep"/>
+          <audio id="beep" ref={setBeepRef} />
         </div>
       </div>
     )
